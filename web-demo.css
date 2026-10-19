@@ -1,0 +1,21 @@
+/* Mobile browser shell around the shared mini program pages. */
+.device-status { display: none; }
+.device .topbar { height: 68px; padding: 14px 16px; }
+.web-demo-badge { display: inline-flex; align-items: center; min-height: 28px; padding: 4px 10px; border: 1px solid #ddcfbb; border-radius: 14px; font-size: 11px; color: #786351; background: #fffdf8; white-space: nowrap; }
+.device .menu-categories { top: 78px; }
+.device .splash-skip { top: 24px; }
+.device .sheet { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.device .sheet input { font-size: 16px; }
+.device .sheet .web-picker { min-height: 44px; font-size: 14px; }
+.device .demo-tools { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.device .demo-tools button { min-height: 44px; }
+.device .app { min-height: 100vh; }
+@media (max-width: 800px) {
+  #mount { min-height: 100vh; }
+  .preview-layout { min-height: 100vh; }
+  .device .topbar { padding-top: max(14px,env(safe-area-inset-top)); height: calc(68px + env(safe-area-inset-top)); }
+  .device .menu-categories { top: calc(78px + env(safe-area-inset-top)); }
+  .device .app { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+  .device .tabbar { padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
+  .device .sheet { max-height: 94dvh; }
+}
